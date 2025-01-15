@@ -1,0 +1,1467 @@
+@font-face{
+    font-family: 'titleH1';
+    src: url(/fonts/fontTypeFaces/HeroNormal.ttf);
+}
+
+@font-face{
+    font-family: 'bodyFont';
+    src: url(/fonts/fontTypeFaces/Roboto-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'originalFont';
+    src: url(/fonts/fontTypeFaces/Original.ttf);
+}
+
+@font-face{
+    font-family: 'evergreenFont';
+    src: url(/fonts/fontTypeFaces/EvergreenFont.otf);
+}
+
+@font-face{
+    font-family: 'boulevardFont';
+    src: url(/fonts/fontTypeFaces/BoulevardFont.ttf);
+}
+
+@font-face{
+    font-family:'spectachromeFont';
+    src: url(/fonts/fontTypeFaces/Spectachrome.otf);
+}
+
+@font-face{
+    font-family: 'tropicHighFont';
+    src: url(/fonts/fontTypeFaces/TropicHigh.otf);
+}
+
+
+
+:root{
+    --imageComparisonSliderWidth:min(0vw, 769px);
+    --imageComparisonSliderHandleWidth: 50px;
+    --selectorFontSize:175%;
+}
+
+
+body{
+    top: 0;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+/*BEGIN NAV*/
+nav{
+    background-color: rgb(255, 233, 68);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 10%;
+    width: 100%;
+}
+
+/*END NAV*/
+
+/*BEGIN NavTop*/
+.navTop{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    z-index: 102;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: translateY(0%);
+    border-bottom: 1px solid #dddd;
+    transition: .5s;
+}
+
+.showSearch{
+    transform: translateY(-100%);
+}
+
+.navTopLeft{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.navTopLeft input{
+    height: 50%;
+    width: 95%;
+}
+
+.navtopRIGHT{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+
+.hideSearch{
+    background-color: transparent;
+    border: none;
+}
+
+.hideSearch:hover{
+    cursor: pointer;
+    opacity: .5;
+    transition: .5s;
+}
+
+.hideSearch img{
+    width: 70%;
+    height: 70%;
+}
+
+.siteSearch{
+    background-color: transparent;
+    border: none;
+}
+
+.siteSearch:hover{
+    cursor: pointer;
+    opacity: .5;
+    transition: .5s;
+}
+
+.siteSearch img{
+    width: 50%;
+    height: 50%;
+}
+
+/*END NavTop*/
+
+
+/*BEGIN NavMenu*/
+.navMenu{
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 101;
+    display: flex;
+    border-bottom: 1px solid #dddd;
+}
+
+/*BEGIN NavMenuLeft*/
+.navMenuLeft{
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navMenuLeftLogo img{
+    width: 40%;
+}
+
+/*END NavMenuLeft*/
+
+
+/*BEGIN NavMenuMiddle*/
+.navMenuMiddle{
+    height: 100%;
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: #ffffff;
+}
+
+
+/*BEGIN NAV MENU MIDDLE BUTTONS*/
+.navButton{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    color: black;
+    background-color:#ffffff;
+    border: none;
+    opacity: 1;
+    transition: .25s;
+}
+
+.navButton p{
+    font-family: bodyFont;
+    font-weight: normal;
+    color: black;
+}
+
+.navButton a{ /* use for contact button */
+    text-decoration: none;
+    color: black;
+}
+
+.navButton:hover{
+    cursor: pointer;
+    opacity: .4;
+    transition: .25s;
+}
+
+.navButton img{ /*arrow icon*/
+    width: 10%;
+    transform: translateY(10%);
+}
+
+.navButton{
+    border-bottom: 4px solid white;
+}
+
+
+.LensesButton{
+    border-bottom: 4px solid rgb(255, 102, 0) ;
+}
+
+.rotate { /* ARROW ICON IN NAV BUTTONS */
+    transition: transform 0.5s;
+}
+
+
+/*END NAV MENU MIDDLE BUTTONS*/
+
+/*BEGIN NAV MENU MIDDLE DROP DOWNS*/
+.navItemDropDown{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: transparent;
+    height:100%;
+    width: 125%;
+    margin: 0;
+    font-family: bodyFont;
+}
+
+.navDropDown{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color:#ffffff;
+    z-index: 99;
+    width: 100%;
+    height: 175%;
+}
+
+.navDropDown a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    border: 1px solid #dddd;
+    opacity: 1;
+    transition: .25s ease-in-out;
+}
+
+.navDropDown a:hover{
+    color: white;
+    background-color: black;
+    transition: .25s ease-in-out;
+}
+
+.navItemDropDown .navDropDown {
+    display: flex;
+    z-index: -1;
+}
+
+
+.storeDropDown{
+    transform: translateY(57.4%);
+    display: flex;
+    transition: .5s;
+}
+
+.showStore{
+    transform: translateY(-57.4%);
+    transition: .5s;
+}
+
+
+.communityDropDown{
+    transform: translateY(34.5%);
+    display: flex;
+    height:291.66666666666666%;
+    transition: .5s;
+}
+
+.showCommunity{
+    transform: translateY(-66%);
+    transition: .5s;
+}
+
+
+
+/*END NAV MENU MIDDLE DROP DOWNS*/
+
+/*END NavMenuMiddle*/
+
+
+/*BEGIN NavMenuRight*/
+.navMenuRight{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+
+/*BEGIN NavMenuRight Buttons*/
+
+.searchButton{
+    background-color: transparent;
+    border: none;
+    background-color: #ffffff;
+    height: 50%;
+    width: 10%;
+}
+
+.searchButton img{
+    height: 100%;
+    width: 70%;
+    transform: translateY(5%);
+    opacity: 1;
+    transition: .25s;
+}
+
+.searchButton img:hover{
+    cursor: pointer;
+    opacity: .4;
+    transition: .25s;
+}
+
+.cartButton{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 10%;
+    color: black;
+    background-color:rgb(255, 255, 255);
+    opacity: 1;
+    transition: .25s;
+}
+
+.cartButton p{
+    font-family: bodyFont;
+    font-weight: normal;
+    color: black;
+    opacity: 1;
+    transition: .25s;
+}
+
+.cartButton:hover{
+    cursor:default;
+}
+
+.cartButton p:hover{
+    cursor: pointer;
+    opacity: .5;
+    transition: .25s;
+}
+
+/*END NavMenuRight Buttons*/
+
+/*END NavMenuRight*/
+
+/*END NavMenu*/
+
+
+/*BEGIN NavBottom*/
+.navBottom{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 24%;
+    position: fixed;
+    z-index: 98;
+    border-bottom: 1px solid #dddd;
+    border-top: 1px solid #dddd;
+    transform: translateY(41%);
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.showLens{
+    transform: translateY(-60%);
+}
+
+.navBottom a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3%;
+    transform: translateY(20%);
+    text-decoration: none;
+    opacity: 1;
+    transition: .25s;
+}
+
+.navBottom a:hover{
+    opacity: .5;
+    transition: .25s;
+}
+
+.navBottom a img {
+    height: 5vw;
+    width: 100%;
+}
+/*END NavBottom*/
+
+
+/*BEGIN NAVBOTTOM LENS FONTS */
+.navLensFont{
+    background-color: transparent;
+    text-decoration: none;
+    color: black;
+    font-size: 175%;
+    font-weight: bolder;
+    transform: translateY(-30%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lensFontOriginal{
+    font-family: originalFont;
+}
+
+.lensFontEvergreen{
+    font-family: evergreenFont;
+}
+
+.lensFontBoulevard{
+    font-family: boulevardFont;
+}
+
+.lensFontSpectachrome{
+    font-family: spectachromeFont;
+}
+
+.lensFontTropicHigh{
+    font-family: tropicHighFont;
+}
+/*END NAVBOTTOM LENS FONTS */
+
+/*END NAV */
+
+/* BEGIN HERO */
+.hero{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(/images/BouleVardPage/boulevard1.png);
+    background-position: 0% 35%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.heroContent{
+    height: 60%;
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heroContent h1 {
+    font-family: 'boulevardFont';
+    color: white;
+    font-size: 500%;
+    transform: translateY(-10%);
+    text-shadow: -5px 5px 20px #740d97;
+
+}
+
+.heroContent p {
+    font-family: bodyFont;
+    color: white;
+    font-size: 150%;
+    transform: translateY(-35%);
+    text-shadow: -1px 2px 5px black;
+}
+
+.heroContent a {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    height: 10%;
+    width: 30%;
+    transform: translateY(-60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: bodyFont;
+    opacity: 1;
+    transition: .25s;
+}
+
+.heroContent a:hover{
+    background-color: black;
+    color: white;
+}
+
+
+.heroMenu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    transform: translateY(50%);
+}
+
+
+.heroButtonBreakdown{
+    height: 50px;
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    border-radius: 25px;
+    text-align: center;
+    text-justify: 50%;
+    color: white;
+    font-family: helvetica;
+}
+
+.heroButtonBreakdownNext{
+    height: 50px;
+    width: 350px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-radius: 25px;
+    text-align: center;
+    text-justify: 50%;
+    color: white;
+    font-family: Helvetica;
+}
+
+
+.circle{
+    position: absolute;
+    background-color: #000000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    color: white !important;
+    text-decoration: none;
+}
+
+.nextCircle{
+    position: absolute;
+    background-color: #000000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    color: rgb(255, 255, 255) !important;
+    text-decoration: none;
+}
+
+
+
+
+.oval{
+    background-color: black;
+    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .5s;
+}
+
+.nextOval{
+    background-color: black;
+    width: 100%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .5s;
+}
+
+
+.oval p{
+    color: white;
+    transform: translateX(15%);
+}
+
+.nextOval p{
+    color: white;
+    transform: translateX(-15%);
+}
+
+
+
+
+
+
+.heroButtonMiddle{
+    border: 3px solid white;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+.heroButtonMiddle:hover{
+    opacity: .5;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+
+
+
+/* END HERO */
+
+/* BEGIN SLIDER AND EXPERIENCE SELECTOR */
+
+/* BEGIN bodyForSliderAndExperienceSelector */
+
+
+
+.sliderMasterBodyDiv{
+    background-color: #323230;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.explanation{
+    position: relative;
+    max-width: 80vw;
+    min-width: 80vw;  
+    height: auto;
+    max-height: 5vh;
+    min-height: 5vh;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: bodyFont;
+    color: white;
+    font-weight: 500;
+    font-size: 125%;
+
+}
+
+#imageComparisonSlider{
+    position: relative;
+    max-width: 80vw;
+    min-width: 80vw;
+    overflow: hidden;
+    cursor: col-resize;
+    height: 75%;
+}
+
+#imageComparisonSlider img{ /* both images */
+    display: block;
+    max-width: 80vw;
+    min-width: 80vw;  
+    height: auto;
+    max-height: 80vh;
+    min-height: 80vh;
+    object-fit: cover;
+    pointer-events: none;
+    user-select: none;
+    object-fit:inherit;
+}
+
+#imageComparisonSlider .imageWrapper{ /* BEGORE IMAGE */
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    z-index: 1;
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+#imageComparisonSlider .imageWrapper img{ /* BEGORE IMAGE */
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+#imageComparisonSlider .label{
+    position: absolute;
+    top: 1rem;
+    z-index: 3;
+    height: 30%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.label{
+    border: 3px solid black;
+}
+
+.labelText{
+    background-color: black;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: bodyFont;
+}
+
+.labelTextAfter{
+    background-color: black;
+    color: white;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: bodyFont;
+}
+
+.labelText p{
+    color: white;
+    font-family: helvetica, sans-serif;
+    font-weight: lighter;
+    letter-spacing: .1rem;
+}
+
+.labelBeforePictureFrame{
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.labelAfterPicture{
+    height: 80%;
+    width: 100%;
+    background-image: url(/images/BouleVardPage/boulevardON.png);
+    background-size: cover;
+}
+
+.labelBeforePicture{
+    height: 80%;
+    width: 100%;
+    background-image: url(/images/BouleVardPage/boulevardOFF.png);
+    background-size: cover;
+}
+
+.beforePhoto img{
+    object-fit: cover;
+}
+
+
+#imageComparisonSlider .label.after-Label{
+    left: 1rem;
+}
+
+#imageComparisonSlider .label.before-Label{
+    right: 1rem;
+}
+
+#imageComparisonSlider .handle{
+    position: absolute;
+    top: 0;
+    left: calc(50% - var(--imageComparisonSliderHandleWidth)/2);
+    width: var(--imageComparisonSliderHandleWidth);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    z-index: 2;
+    transition: .5s ease;
+}
+
+
+
+#imageComparisonSlider .handleLine{
+    color: white;
+    width: 1px;
+    flex-grow: 1;
+    background-color: white;
+    z-index: 2;
+}
+
+
+
+
+#imageComparisonSlider .handleCircle{
+    width: var(--imageComparisonSliderHandleWidth);
+    height: var(--imageComparisonSliderHandleWidth);
+    color: white;
+    border: none;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* END COMPARISON SLIDER */
+
+/* BEGIN lensExperienceSelector */
+
+.lensExperienceSelector{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    position: relative;
+    width: 75vw;
+    max-width: 75vw;
+    min-width: 75vw;
+    height: 10vh;
+    max-height: 10vh;
+    min-height: 10vh;
+    align-items: center;
+    justify-content: start;
+    gap: 4%;
+    padding-left: 5%;
+    color: white;
+    font-family: helvetica, sans-serif;
+    font-weight: bold;
+    opacity: 100%;
+}
+
+
+.lensExperienceSelector button{
+    background-color: #ffffff00;
+    color: white;
+    border: none;
+}
+
+
+
+.lensExperienceSelector button:hover{
+    cursor: pointer;
+}
+
+
+/* BEGIN LENS BUTTON FONTS */
+
+.originalButton{
+    font-family: originalFont;
+    font-size: var(--selectorFontSize);
+    font-weight: 600;
+    color: #e8b878;
+    transition: .5s;
+}
+
+.boulevardButton{
+    font-family: boulevardFont;
+    font-size: var(--selectorFontSize);
+    transition: .5s;
+}
+
+.spectachromeButton{
+    font-family: spectachromeFont;
+    font-size: var(--selectorFontSize);
+    font-weight: 600;
+    transition: .5s;
+}
+
+.tropichighButton{
+    font-family: tropichighFont;
+    font-size: var(--selectorFontSize);
+    font-weight: bold;
+    transition: .5s;
+}
+
+
+.evergreenButton{
+    font-family: evergreenFont;
+    font-size: var(--selectorFontSize);
+    font-weight: bold;
+    transition: .5s ease-in-out;
+    transition: .5s;
+}
+
+.originalButton:hover{
+    color: #e8b878;
+    transition: .5s ;
+}
+
+.boulevardButton:hover{
+    color: #a73c8c;
+    transition: .5s ease-in-out;
+}
+
+.spectachromeButton:hover{
+    color:#e5ba55;
+    transition: .5s ease-in-out;
+}
+
+.tropichighButton:hover{
+    color:#64e8ff;
+    transition: .5s ease-in-out;
+}
+
+.evergreenButton:hover{
+    color:#05a84e;
+    transition: .5s ease-in-out;
+}
+
+/* END LENS BUTTON FONTS */
+/* END COMPARISON SLIDER DIV TOTAL */
+
+/* BEGIN VIDEO DIV */
+
+.videoDivMaster{
+    margin: 0;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.videoContainer{
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* END VIDEO DIV */
+
+/* BEGIN PHOTOS DIV */
+
+.photosContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    :root {
+        --imageComparisonSliderWidth:90vw
+    }
+}
+
+@media(max-width:1531px){
+    :root{
+        --selectorFontSize:125%;
+    }
+}
+
+@media(max-width:950px){
+    :root{
+        --selectorFontSize:90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BEGIN BODY */
+
+
+/*BEGIN Social & Footer */
+.socialFooter{
+    position: absolute;
+    background-color: rgb(39, 25, 25);
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.socialFooter ul{
+    list-style: none;
+}
+
+.socialFooter a{
+    text-decoration: none;
+}
+
+.socialFooter p{
+    font-family: bodyFont;
+    color: white;
+}
+
+
+
+.socialFooter a{
+    font-family: bodyFont;
+    color: white;
+}
+
+/* BEGIN INSTAGRAM SECTION*/
+
+.insta{
+    display: flex;
+    width: 100%;
+    height: 24%;
+    background-color: orange;
+}
+
+.instaleft{
+    background-color: white;
+    height: 100;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-top: 2%;
+    justify-content: center;
+}
+
+.instaleft h1{
+    font-family: titleh1;
+}
+
+.instaleft h4{
+    font-family: bodyFont;
+    transform: translateY(-200%);
+    color: black;
+}
+
+
+
+.instaright{
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: start;
+}
+
+.instaright a{
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    font-family: bodyFont;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: .25s;
+}
+
+.instaright a:hover{
+    font-size: 125%;
+    transition: .5s;
+}
+
+.instaright h2{
+    font-family: bodyFont;
+    text-decoration: none;
+    font-size: 175%;
+}
+
+.instaright img{
+    height: 10%;
+    width: 10%;
+    transition: .5s
+}
+
+.instaright a:hover>img{
+    height: 15%;
+    width: 15%;
+    transition: .5s;
+}
+
+
+/* END INSTAGRAM SECTION*/
+
+
+/* BEGIN FOOTER PROPER*/
+
+.footerProper{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 100%;
+    background-color: black;
+    justify-content: space-evenly;
+}
+
+.footerProper>a{
+    text-decoration: none ;
+}
+
+.footerProper a{
+    opacity: 1;
+    transition: .25s ease-in-out;
+}
+
+.footerProper a:hover{
+    opacity: .5;
+    transition: .25s ease-in-out;                                                                                             ;
+}
+
+.footerLeft{
+    height: 80%;
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid white;
+    transform: translateX(5%);
+}
+
+.footerLeftCol1{
+    display: flex;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    list-style: none;
+    text-decoration: none;
+    transform: translate(-30%,5%);
+}
+
+
+.socialIcons{
+    display: flex;
+}
+
+.socialIcons img{
+    width: 50%;
+    align-self: center;
+}
+
+.socialIcons img:hover{
+    opacity: .5;
+    transition: .25s ease-in-out;
+}
+
+.email>p{
+    color: white;
+    font-family: bodyFont;
+    font-weight: bolder;
+}
+
+.footerLeftCol2{
+    display: flex;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    transform: translateY(5%);
+        transform: translate(-50%,5%);
+}
+
+.footerLeftCol3{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+}
+
+
+/* END FOOTER LEFT*/
+
+.footerCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 10%;
+    height: 83.5%;
+}
+
+/* BEGIN footerRight*/
+
+.footerRight{
+    width: 45%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+    text-align: center;
+    border-bottom: 1px solid white;
+    transform: translateX(-5%);
+}
+
+.footerRight h2{
+    color: white;
+    font-family: bodyFont;
+}
+
+.footerRight p{
+    color: white;
+    font-family: bodyFont;
+}
+
+
+
+.footerRightCol1{
+    background-color: black;
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerRightEmailInput{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50%);
+}
+
+
+
+.footerRightEmailInput input{
+    width: 35%;
+    height: 100%;
+    border: none;
+    background-color: white;
+}
+
+.footerRightEmailInput input::placeholder{
+    color: black;
+    font-family: bodyFont;
+}
+
+.footerRightEmailInput button{
+    color:white;
+    background-color: black;
+    border: 1px solid white;
+    width: 25%;
+    height: 104%;
+    transition: .25s;
+    font-family: bodyFont;
+    font-weight: bolder;
+}
+
+.footerRightEmailInput button:hover{
+    background-color: white;
+    color: black;
+    transition: .25s;
+    cursor: pointer;
+}
+
+
+
+
+.footerBottomLeft{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    width: 45%;
+    height: 10%;
+    transform: translateX(-2%);
+    font-family: bodyFont;
+}
+
+.paymentMethods{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+    flex-direction: row;
+}
+
+.paymentMethods img{
+    max-height: 60%;
+    max-width: 60%;
+    min-height: 20%;
+    min-width: 20%;
+    pointer-events: none;
+    cursor: none;
+}
+
+
+.footerBottomRight{
+    width: 45%;
+    height: 10%;
+    transform: translateX(2%);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* END FOOTER PROPER*/
+/*END Social & Footer */
+
+
+.currencyList{
+    background-color: #ffffff;
+    border: none;
+    height: 50%;
+    opacity: 1;
+    transition: .25s ease-in-out;
+}
+
+.currencyList:focus{
+    border: 2px solid black;
+}
+
+#currencyForm{
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    border: none;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 20%;
+    height: 100%;
+}
+
+.currencyList:hover{
+    cursor: pointer;
+    opacity: .5;
+    transition: .25s;
+}
+
+.currencyList:focus{
+    opacity: 1;
+}
+
+.currencyList option{
+    background-color: black;
+    color: white;
+}
+
+.hidden{
+    display: none;
+}
+
+
+
