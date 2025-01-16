@@ -28,12 +28,16 @@ To run this project locally:
    ```bash
    git clone https://github.com/drossi96/TensSunglassesSite.git
 
+2. Navigate to the project directory: After cloning, go to the project directory.
+   ```bash
+   cd TensSunglassesSite
 
+3. Open the project in your browser. This is a static website, so you can open the tensHome.html file directly in your browser. You can do this by either double-clicking the Tenshome.html file in your file explorer, or opening it from the terminal.
 
 
 ##  Usage
 
-- Browse the tens sunglasses collection.
+- Browse the Tens sunglasses collection.
 - Use the filter to search for specific styles or colors.
 - Click on a product for more details.
 - Use the on/off filter to see the visual effect each lens has on the naked eye.
