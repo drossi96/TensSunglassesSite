@@ -30,11 +30,8 @@ To run this project locally:
 
 
 
-## 5. **Usage**
-Explain how to use the website or any specific instructions for interacting with it.
 
-```markdown
-## Usage
+##  Usage
 
 - Browse the sunglasses collection.
 - Use the filter to search for specific styles or colors.
