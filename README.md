@@ -33,7 +33,7 @@ To run this project locally:
 
 ##  Usage
 
-- Browse the sunglasses collection.
+- Browse the tens sunglasses collection.
 - Use the filter to search for specific styles or colors.
 - Click on a product for more details.
 - Use the on/off filter to see the visual effect each lens has on the naked eye.
