@@ -1,7 +1,5 @@
 #TensSunglassesSite
 
-#TensSunglassesSite is a website showcasing 
-
 ## Description
 My Tens Sunglasses Site is a buillt-from-scratch imitation e-commerce website created for the purpose of showcasing my web development skills. It demonstrates my proficiency in HTML, CSS, and JavaScript by replicating the website of tens.co...
 As part of my journey to become a proficient web developer, I undertook a project to create an imitation website based on an existing, well-designed website. Coded from scratch, this project allowed me to demonstrate my skills
