@@ -32,7 +32,7 @@ To run this project locally:
    ```bash
    cd TensSunglassesSite
 
-3. Open the project in your browser. This is a static website, so you can open the tensHome.html file directly in your browser. You can do this by either double-clicking the Tenshome.html file in your file explorer, or opening it from the terminal.
+3. Open the project in your browser. This is a static website, so you can open the tensHome.html file directly in your browser and/or vscode. You can do this by either double-clicking the tensHome.html file in your file explorer, or opening it from the terminal.
 
 
 ##  Usage
