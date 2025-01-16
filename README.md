@@ -30,7 +30,7 @@ To run this project locally:
 
 
 
-### 5. **Usage**
+## 5. **Usage**
 Explain how to use the website or any specific instructions for interacting with it.
 
 ```markdown
@@ -39,6 +39,7 @@ Explain how to use the website or any specific instructions for interacting with
 - Browse the sunglasses collection.
 - Use the filter to search for specific styles or colors.
 - Click on a product for more details.
+- Use the on/off filter to see the visual effect each lens has on the naked eye.
 
 
 ## Contact
